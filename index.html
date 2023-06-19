@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="body2">
+    <div id="container01">
+        <div id="start-page">
+            <h1>SELECIONE O TEMA:</h1>
+            <select class="tema" id="theme-select">
+                <option value="tema1">eSPORTS</option>
+                <option value="tema2">JOGADORES</option>
+                <option value="tema3">AGENTES E MAPAS</option>
+                <option value="tema4">SOBRE O JOGO</option>
+            </select>
+            <button class="comecar" id="start-button">Começar</button>
+            <a class="rank" href="rank.html">Ranking</a>
+        </div>
+        <div id="question-page" style="display: none;">
+
+            <div class="header" id="header">
+                <div class="header-row">
+                    <span id="tema-text"></span>
+                    <div class="spacer"></div>
+                    <button class="reiniciar-pequeno" id="restart-button">Reiniciar</button>
+                </div>
+
+                <p id="progress-text"></p>
+            </div>
+
+            <h2 class="perguntas" id="question"></h2>
+            <ul id="choices">
+                <li><label><input type="radio" name="choice" value="A"> <span id="choiceA"></span></label></li>
+                <li><label><input type="radio" name="choice" value="B"> <span id="choiceB"></span></label></li>
+                <li><label><input type="radio" name="choice" value="C"> <span id="choiceC"></span></label></li>
+                <li><label><input type="radio" name="choice" value="D"> <span id="choiceD"></span></label></li>
+                <li><label><input type="radio" name="choice" value="E"> <span id="choiceE"></span></label></li>
+            </ul>
+            
+            <p id="warning-message" class="mensagem-aviso"></p>
+
+            <div class="botoes-perguntas">
+                <button class="responder" id="answer-button">Responder</button>
+                <button class="proxima" id="next-button" style="display: none;">Próxima</button>
+            </div>    
+
+        </div>
+
+        <div id="result-page" style="display: none;">
+            <h2 class="resultado-final" id="result"></h2>
+            <button class="rank" onclick="window.location.href = 'rank.html'">Ranking</button>
+            <button class="reiniciar" onclick="window.location.href = 'index.html'">Reiniciar</button>
+        </div>        
+
+    </div>
+
+    <script src="localStorage.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
